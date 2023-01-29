@@ -709,3 +709,28 @@ page rendering and painting.
 .. _`downgrade attack`: http://en.wikipedia.org/wiki/SSL_stripping
 .. _`OSI Model`: https://en.wikipedia.org/wiki/OSI_model
 .. _`Spanish`: https://github.com/gonzaleztroyano/what-happens-when-ES
+Have you ever thought about what happens when you type "https://www.google.com" on your browser?
+
+Let's have a brief look at some of the things that happen when you type "https://www.google.com" on your browser.
+The following events would have to take place before google homepage will appear in your computer:
+
+DNS Request: Your computer sends a request to DNS (Domain Name System) first, to resolve the domain "google.com" to an IP address. This is necessary because computers communicate with one another through numbers in the form of IP addresses.
+
+TCP/IP: Once it receives the IP address, it establishes a Transmission Control Protocol (TCP) connection with the server using the Internet Protocol(IP). TCP/IP is the set of protocol that governs how data are transmitted.
+
+Firewall: This then check the request that is coming against set of rules, to ascertain if it would be allowed. Firewall functions to protect the server against any malicious attack.
+
+HTTPS/SSL: Once the connection has been established, the browser sends a request to the server to access the webpage. Because google uses HTTPS (Hypertext Transfer Protocol Secure), an additional layer of security is added in the form of SSL (Secure Sockets Layer) certificate. This encrypts the conversation between the browser and the server to protect sensitive informations, such as login credentials, from being intercepted by third party.
+
+Load Balancer: This helps to distribute the workload (information) to respective servers using an algorithm. It helps to improve scalability, reliability and performance of the server.
+
+Web Server: The server receives the Get request and return the requested webserver that will then generate the HTML and CSS, images and JavaScript.
+
+Application Server: Some request may also be routed on some application server, which runs the backend code that powers more dynamic features of the website, such as search functionality.
+
+Database: The application server may need to retrieve the requested information that are contained in the database.
+
+Response: Once information has been received by the webserver or the application server, a response is sent back to the browser through TCP/IP protocol. The browser then renders the webpage and display it on your screen.
+
+This is the simplified overview of what happens when you type "https://www.google.com" on your browser.
+The process is complex and involves a lot of protocols but this will give you a good understanding of the basic processes that take place behind the scenes. #alx #security #database #google
